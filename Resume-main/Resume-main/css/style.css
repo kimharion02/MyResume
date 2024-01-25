@@ -1,0 +1,459 @@
+* {
+  /* This will be applied to child elements also */
+  font-family: 'Poppins', sans-serif;
+  -webkit-user-drag: none;
+
+}
+
+body {
+    /* Limited To Body Elements */
+    overflow-x: hidden;
+    visibility: hidden;
+    color: white;
+    background-color: #1E1E28;
+}
+
+
+
+.main-row {
+  margin-left: 300px;
+}
+
+.home-banner {
+  background: linear-gradient(rgb(22 22 29 / 92%), rgb(32 32 42 / 80%)),
+    url('../images/bckgrnd.jpg');
+}
+
+.right-margin {
+  padding: 0px 35px;
+}
+
+
+.main-home {
+  background: linear-gradient(to right,rgb(22 22 29 / 68%), rgb(32 32 42 / 46%)), url('../images/bckgrnd.jpg');
+  color: white;
+  margin: 35px;
+  height: 400px;
+}
+
+
+.home-banner,
+.main-home {
+  background-size: cover;
+  background-position: center;
+}
+
+.main-home-title {
+    font-size: 55px;
+}
+
+
+.face-2-img {
+    height: 435px;
+    position: absolute;
+    top: 0px;
+    right: 60px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.home-info {
+    font-size: 19px;
+    margin: 20px 35px;
+}
+
+.heading:first-child::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #149ddd;
+}
+
+/* Add this to your existing CSS or create a new CSS file */
+
+/* Sidebar Toggle Styles */
+.sidebar-toggle-checkbox {
+  display: none;
+}
+
+.sidebar-toggle-label {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  background-color: #333; /* Adjust color as needed */
+}
+
+/* Hamburger Icon */
+.sidebar-toggle-label::before,
+.sidebar-toggle-label::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff; /* Adjust color as needed */
+  transition: transform 0.3s ease;
+}
+
+.sidebar-toggle-label::before {
+  top: 8px;
+}
+
+.sidebar-toggle-label::after {
+  top: 16px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .sidebar-toggle-checkbox:checked + .sidebar-toggle-label::before {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .sidebar-toggle-checkbox:checked + .sidebar-toggle-label::after {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .sidebar-toggle-checkbox:checked + .sidebar-toggle-label {
+      background-color: transparent;
+  }
+
+  #mainMenu {
+      transform: translateX(-300px); /* Adjust the width as needed */
+      transition: transform 0.3s ease;
+  }
+
+  .sidebar-toggle-checkbox:checked + .sidebar-toggle-label ~ #mainMenu {
+      transform: translateX(0);
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffc107;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #f46258;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #FFC107;
+  border: 2px solid #1f5297;
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  margin-bottom: 20px;
+}
+
+.services .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: #6b52bf;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #6b52bf;
+}
+
+.services .icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #6b52bf;
+}
+
+.services .title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .title a {
+  color: #343a40;
+}
+
+.services .title a:hover {
+  color: #6b52bf;
+}
+
+.services .description {
+  margin-left: 80px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+/* ======= Testimonials Section ======= */
+.testimonials {
+  padding: 60px 0;
+}
+
+.testimonials .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column; /* Set container to column layout by default */
+}
+
+.testimonial-item {
+  background-color: #FFC107;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px 0;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: calc(100% - 30px); /* Full width on smaller screens */
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-container {
+    flex-direction: row; /* Set container to row layout for larger screens */
+    justify-content: space-around;
+  }
+
+  .testimonial-item {
+    width: calc(33.33% - 30px);
+  }
+}
+
+.testimonial-item:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-item p {
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.quote-icon-left,
+.quote-icon-right {
+  color: #6b52bf;
+  font-size: 24px;
+}
+
+.quote-icon-left {
+  margin-right: 5px;
+}
+
+.quote-icon-right {
+  margin-left: 5px;
+}
+
+.testimonial-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.testimonial-item h4 {
+  font-size: 14px;
+  color: #999;
+  margin: 5px 0;
+}
+
+
+/* ======= Contact Us Section ======= */
+.contact {
+  padding: 60px 0;
+}
+
+.contact .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column; /* Set form to column layout by default */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    flex-direction: row; /* Set form to row layout for larger screens */
+    justify-content: space-between;
+  }
+
+  .form-group {
+    width: 48%; /* Adjust as needed, leaving some space for margins */
+  }
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #666;
+}
+
+.contact-info i {
+  font-size: 24px;
+  color: #6b52bf;
+  margin-right: 10px;
+}
+
+/* Adjust map size for responsiveness */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%; /* Aspect ratio (height:width) for a responsive iframe */
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+
+
+.form {
+  font-size: 18px;
+}
+
+.switch-mode {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+          
+ @keyframes spin {
+     100% {
+        transform: rotate(360deg);
+           }
+ }
+          
+  .center {
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin: auto;
+        }
+
+        
+  /* CSS */
+.spacer {
+  height: 50px; /* Adjust the value as needed */
+}
+
+
+
